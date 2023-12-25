@@ -1,6 +1,6 @@
 
 // Here I just grab these for later use
-const griddy = document.querySelector('#griddy');
+const griddy = document.querySelector('#griddy'); // AKA grid
 const setting = document.querySelector('#setting');
 
 
@@ -13,11 +13,11 @@ const setting = document.querySelector('#setting');
 
 
 // here I load a sketchpad to draw on automatically set to 130 squares per side when the page loads and also when the reset button is clicked
-
+// dim = dimensions
 let dim = 100;
 
 let side = dim;
-let inpt = 650 / side; // this is the total width divided by how many squares they want per side
+let inpt = 650 / side; // this is the total width in pixels of the drawing space divided by how many squares they want per side of the drawing space (drawing space is 650 pixels by 650 pixels)
 
 let sqrd = side;
 let set = sqrd * side;
@@ -42,18 +42,15 @@ for (let i = 0; i < set; i++) {
         sqr.style.backgroundColor = 'black';
     });
 }
-// here I just make a grid automatically for when the page loads without any user input 
 
-// note to self: if you make the sides equal to each other shouldnt it always be a square?
-// if the width is set to 900px, you just need to make sure to not let the height of the squares combined exceed 900px and also always equal 900px;
-
+// note to self: if the width is set to 650px, you just need to make sure to not let the height or width of the squares combined exceed 650px and also always equal 650px;
 
 // Here I make the code for when the user clicks the setting button to adjust size of grid
 
 setting.addEventListener('click', () => { 
 
     removeAllChildNodes(griddy);
-
+    // here dim = dimensions
     dim = prompt('Enter the number of blocks per side of the square grid (not greater than 200).');
 
     if (dim > 200){
@@ -61,10 +58,10 @@ setting.addEventListener('click', () => {
     } 
 
     side = dim;
-    inpt = 650 / side; // this is the total width divided by how many squares they want per side
+    inpt = 650 / side; // this is the total width in pixels of the drawing space divided by how many squares they want per side of the drawing space (drawing space is 650 pixels by 650 pixels)
 
     sqrd = side;
-    set = sqrd * side;
+    set = sqrd * side; // this is just one side of the drawing space multiplied by another side to find amount of squares to make inside the grid
     console.log(set);
     wid = inpt + 'px';
     heit = inpt + 'px';
