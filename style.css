@@ -13,14 +13,47 @@ body {
     width: 95%;
     background-color:rgb(30, 30, 30);
     flex-direction: row;
-    margin-bottom: 2rem;
+    margin-bottom: .1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0rem;
 }
 
-.heading button {
-    width: 25%;
+.heading a {
+    width: 27%;
     background-color: white;
     color: black;
     font-size: 2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading button {
+    width: 28%;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+}
+
+.heading h1 {
+    width: 33%;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    font-size: 2.1rem;
+    text-align: center;
+    text-decoration: none;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, sans-serif
 }
 
 .grid {
